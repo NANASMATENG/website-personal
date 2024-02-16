@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "kalam";
+        src: url(../fonts/Kalam/Kalam-Light.ttf) format("truetype");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* -------------- bagian container ------------------- */
+      .container {
+        background-color: rgb(255, 250, 243);
+        padding: 10px;
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "main aside"
+          "footer footer";
+      }
+      /* -------------- bagian nav ------------------- */
+      nav {
+        display: grid;
+        top: 0;
+        left: 0;
+        right: 0;
+        grid-template-columns: 0.7fr 2fr;
+        position: fixed;
+        background-color: aqua;
+        width: 100%;
+        height: 60px;
+        align-content: center;
+        border-bottom: 5px solid red;
+        box-sizing: border-box;
+      }
+      .menu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-content: center space-evenly;
+        place-items: center;
+        height: 100%;
+      }
+      .menu li {
+        list-style: none;
+      }
+      .menu li a {
+        text-decoration: none;
+        padding: 20px;
+        box-sizing: border-box;
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px;
+        text-align: center;
+      }
+      .menu li a:hover {
+        background-color: antiquewhite;
+        color: rgb(49, 49, 49);
+      }
+      /* -------------- bagian header ------------------- */
+      header {
+        font-family: "kalam";
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        grid-area: header;
+      }
+      header h1 {
+        margin-bottom: 20px;
+      }
+      header img {
+        width: 50%;
+        border: 1px solid black;
+        margin-top: 50px;
+      }
+      /* -------------- bagian aside ------------------- */
+      aside {
+        grid-area: aside;
+      }
+      .chapter {
+        border: 1px solid black;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 400px;
+        border-radius: 10px;
+      }
+      .chapter h4 {
+        text-align: center;
+        padding-bottom: 20px;
+        color: brown;
+        font-weight: bold;
+      }
+      .chapter ul li {
+        list-style: none;
+        margin-bottom: 30px;
+      }
+      .chapter ul li a {
+        text-decoration: none;
+        color: brown;
+      }
+      /* -------------- bagian main ------------------- */
+      main {
+        margin-top: 30px;
+        grid-area: main;
+        color: rgb(56, 86, 255);
+        padding: 20px;
+      }
+      main h4 {
+        font-size: 20px;
+        padding-bottom: 20px;
+        color: red;
+      }
+      main h6 {
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        color: red;
+        font-size: 12px;
+        text-align: center;
+      }
+      main p {
+        text-indent: 40px;
+        line-height: 20px;
+        word-spacing: 5px;
+        font-size: 16px;
+      }
+      /* -------------- bagian footer ------------------- */
+      footer {
+        grid-area: footer;
+      }
+      /* -------------- responsive ------------------- */
+      @media (max-width: 600px) {
+        /* -------------- bagian container ------------------- */
+        .container {
+          grid-template-areas:
+            "header header"
+            "aside aside"
+            "main main"
+            "footer footer";
+        }
+        /* -------------- bagian aside ------------------- */
+        .chapter {
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- /* -------------- bagian nav ------------------- */ -->
+      <nav>
+        <div class="logo"></div>
+        <div>
+          <ul class="menu">
+            <li><a href="">home</a></li>
+            <li><a href="">author</a></li>
+            <li><a href="">product</a></li>
+            <li><a href="">team</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- /* -------------- bagian header ------------------- */ -->
+      <header>
+        <h1>Atomic Habits</h1>
+        <h1>edisi #1</h1>
+        <h4>cara mudah dan terbukti</h4>
+        <h4>untuk membentuk kebiasaan baik</h4>
+        <h4>dan menghilangkan kebiasaan buruk</h4>
+        <img src="../logo/atomic-habits/atomic-habits.jpg" alt="" />
+      </header>
+      <!-- /* -------------- bagian aside ------------------- */ -->
+      <aside>
+        <div class="chapter">
+          <h4>chapter</h4>
+          <ul>
+            <li>
+              <a href=""
+                >DASAR-DASAR: mengapa perubahan sangat kecil menghasilkan
+                perbedaan besar</a
+              >
+            </li>
+            <li><a href="">KAIDAH-PERTAMA: menjadikannya terlihat</a></li>
+            <li><a href="">KAIDAH-KEDUA: menjadikannya menarik</a></li>
+            <li><a href="">KAIDAH-KETIGA: menjadikannya mudah</a></li>
+            <li><a href="">KAIDAH-KEEMPAT: menjadikannya memuaskan</a></li>
+            <li>
+              <a href=""
+                >TAKTIK-TAKTIK TINGKAT MAHIR: bagaimana beralih dari sekedar
+                bagus ke benar-benar dahsyat</a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- /* -------------- bagian main ------------------- */ -->
+      <main>
+        <h4>
+          DASAR-DASAR: Mengapa Perubahan Sangat Kecil Menghasilkan Perbedaan
+          besar
+        </h4>
+        <div class="bab-1 bab">
+          <h6>Dahsyatnya Kekuatan atomic Habits</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
+            veritatis debitis reiciendis officiis repellendus similique veniam
+            repellat sint sed. Repellat voluptatibus ratione qui? Sapiente nihil
+            placeat id vel delectus tempora facere, iure earum tenetur ratione
+            iste, nobis, nam amet saepe sit impedit praesentium excepturi
+            laudantium odit quos sed. Asperiores, nisi.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Consequuntur, sapiente qui in eius provident quidem eos aperiam,
+            quis fuga ducimus velit. Veniam nam fuga quisquam. At eos accusamus
+            voluptate tempora delectus debitis culpa aut, cumque nobis
+            asperiores officia est pariatur.
+          </p>
+          <h6>mengapa perumahan kecil menghasilkan perubahan besar</h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+            voluptatem in hic deleniti aperiam nulla nihil beatae obcaecati enim
+            repudiandae accusantium autem aspernatur tenetur quaerat laudantium
+            maiores, doloribus non modi laboriosam consectetur. Quis alias
+            laudantium et porro vel aspernatur nisi expedita error aperiam
+            debitis corrupti commodi doloremque tempore earum, dolores totam,
+            minus numquam, magnam eos inventore exercitationem illum! Quod
+            nesciunt at eveniet quaerat et expedita autem illo ut veritatis
+            porro.
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea
+            obcaecati, officia eos, repudiandae magnam quisquam reprehenderit
+            repellat non voluptatum illo sint quod placeat dolor veritatis!
+            Ullam soluta suscipit quidem ex?
+          </p>
+          <h6>1% lebih baik setiap hari</h6>
+          <img
+            src="../logo/atomic-habits/1_h1iewZAk8tYnVZSgnrjvUA.png"
+            alt=""
+            style="width: 300px"
+          />
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+            corporis quia fuga iure aspernatur vitae nihil consectetur
+            veritatis, facere tempora pariatur, nostrum impedit quisquam vero
+            maxime aut nisi at sunt eveniet. Quaerat culpa quia non fugit
+            perspiciatis ut explicabo quas.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+            nihil! Molestiae praesentium voluptas ea placeat vero exercitationem
+            illo necessitatibus! Repudiandae quae, est dolore ad sapiente quo
+            eaque et architecto, deserunt possimus animi rerum hic autem totam
+            repellat necessitatibus? Asperiores, quam delectus blanditiis vitae
+            provident ab nemo ipsum explicabo. Minus, odio.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+            corporis quia fuga iure aspernatur vitae nihil consectetur
+            veritatis, facere tempora pariatur, nostrum impedit quisquam vero
+            maxime aut nisi at sunt eveniet. Quaerat culpa quia non fugit
+            perspiciatis ut explicabo quas.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+            nihil! Molestiae praesentium voluptas ea placeat vero exercitationem
+            illo necessitatibus! Repudiandae quae, est dolore ad sapiente quo
+            eaque et architecto, deserunt possimus animi rerum hic autem totam
+            repellat necessitatibus? Asperiores, quam delectus blanditiis vitae
+            provident ab nemo ipsum explicabo. Minus, odio.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+            corporis quia fuga iure aspernatur vitae nihil consectetur
+            veritatis, facere tempora pariatur, nostrum impedit quisquam vero
+            maxime aut nisi at sunt eveniet. Quaerat culpa quia non fugit
+            perspiciatis ut explicabo quas.
+          </p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque,
+            nihil! Molestiae praesentium voluptas ea placeat vero exercitationem
+            illo necessitatibus! Repudiandae quae, est dolore ad sapiente quo
+            eaque et architecto, deserunt possimus animi rerum hic autem totam
+            repellat necessitatibus? Asperiores, quam delectus blanditiis vitae
+            provident ab nemo ipsum explicabo. Minus, odio.
+          </p>
+        </div>
+      </main>
+      <!-- /* -------------- bagian footer ------------------- */ -->
+      <footer></footer>
+    </div>
+  </body>
+</html>
